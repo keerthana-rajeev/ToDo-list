@@ -49,6 +49,17 @@ form .btn {
   font-size: 1.1em;
   padding-left: 0.2em;
   cursor: pointer;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 300ms ease-in-out;
+  transition: -webkit-transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+}
+
+form .btn:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .tasks {
@@ -73,6 +84,10 @@ form .btn {
 .tasks .task-lists li {
   margin-bottom: 0.5em;
   cursor: pointer;
+}
+
+.tasks .task-lists li:hover {
+  opacity: 0.4;
 }
 
 .tasks .task-lists .active {
@@ -103,6 +118,10 @@ form .btn {
 
 .tasks form .btn {
   color: #f4f4f4;
+}
+
+.tasks form .new:focus {
+  border-bottom: 3px solid #ddce8c;
 }
 
 .todo-list {
@@ -157,6 +176,14 @@ form .btn {
   display: inline-block;
   margin-left: 0.8em;
   cursor: pointer;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -o-appearance: none;
+  height: 1em;
+  width: 1em;
+  border: 2px solid #5596e6;
+  color: #f4f4f4;
+  border-radius: 50%;
   position: absolute;
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -168,6 +195,13 @@ form .btn {
 
 .todo-list .list-body .task input[type=checkbox]:checked + label {
   opacity: 0.5;
+}
+
+.todo-list .list-body .task input[type=checkbox]:checked {
+  background: #5596e6;
+  border-color: #5596e6;
+  -webkit-box-shadow: inset 0 0 0 2px #f4f4f4;
+          box-shadow: inset 0 0 0 2px #f4f4f4;
 }
 
 .todo-list .list-body .task::after {
@@ -226,6 +260,10 @@ form .btn {
 
 .todo-list .list-body .item-maker form .btn {
   color: #5596e6;
+}
+
+.todo-list .list-body .item-maker form .new:focus {
+  border-bottom: 3px solid #141414d5;
 }
 
 .todo-list .delete {

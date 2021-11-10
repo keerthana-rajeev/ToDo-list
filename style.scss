@@ -38,6 +38,11 @@ form{
         font-size: 1.1em;
         padding-left: 0.2em;
         cursor: pointer;
+        transform: scale(1);
+        transition: transform 300ms ease-in-out;
+    }
+    .btn:hover{
+        transform: scale(1.2);
     }
 }
 .tasks{
@@ -58,6 +63,9 @@ form{
             margin-bottom: 0.5em;
             cursor: pointer;
         }
+        li:hover{
+            opacity: 0.4;
+        }
         .active{
             font-weight: bold;
             text-shadow: 1px 1px 2px #2c2c2c;
@@ -73,6 +81,9 @@ form{
         }
         .btn{
             color: #f4f4f4;
+        }
+        .new:focus{
+            border-bottom: 3px solid #ddce8c;
         }
     }
 }
@@ -114,12 +125,25 @@ form{
                 display: inline-block;
                 margin-left: 0.8em;
                 cursor: pointer;
+                -moz-appearance:none;
+                -webkit-appearance:none;
+                -o-appearance:none;
+                height: 1em;
+                width: 1em;
+                border:2px solid #5596e6;
+                color: #f4f4f4;
+                border-radius: 50%;
                 position: absolute;
                 transform: scale(1);
                 transition: transform 300ms ease-in-out;
             }
             input[type=checkbox]:checked + label{
                 opacity: 0.5;
+            }
+            input[type=checkbox]:checked{
+                background: #5596e6;
+                border-color: #5596e6;
+                box-shadow: inset 0 0 0 2px #f4f4f4;
             }
         }
         .task::after{
@@ -158,6 +182,9 @@ form{
                 }
                 .btn{
                     color: #5596e6;
+                }
+                .new:focus{
+                    border-bottom: 3px solid #141414d5;
                 }
             }
         }

@@ -1,0 +1,357 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Poppins&display=swap");
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #f4f4f4;
+  background-color: #5596e6;
+}
+
+.header {
+  margin: 0 auto 2em;
+  text-align: center;
+  text-transform: uppercase;
+  word-spacing: 0.2em;
+  font-size: 1.7em;
+  font-family: 'Bungee', cursive;
+  color: #ddce8c;
+  text-shadow: 2px 2px 3px #000000;
+}
+
+form {
+  margin: 1em 0 2em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+form .new {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 0.8em;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  opacity: 0.7;
+}
+
+form .btn {
+  border: none;
+  background: transparent;
+  margin-left: 0.5em;
+  font-weight: bolder;
+  font-size: 1.1em;
+  padding-left: 0.2em;
+  cursor: pointer;
+}
+
+.tasks {
+  margin: 2.5em 0 3em 2.5em;
+}
+
+.tasks .title {
+  text-shadow: 2px 2px 3px #000000;
+  margin: 1em 0.5em;
+  word-spacing: 0.1em;
+  color: #ffffff;
+}
+
+.tasks .task-lists {
+  list-style: circle;
+  margin-top: 2.5em;
+  letter-spacing: 0.1em;
+  font-size: 0.9em;
+  padding: 0 0 0 2em;
+}
+
+.tasks .task-lists li {
+  margin-bottom: 0.5em;
+  cursor: pointer;
+}
+
+.tasks .task-lists .active {
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #2c2c2c;
+}
+
+.tasks form .new {
+  border-bottom: 1px solid #f4f4f4;
+  color: #f4f4f4;
+}
+
+.tasks form ::-webkit-input-placeholder {
+  color: #cccccc;
+}
+
+.tasks form :-ms-input-placeholder {
+  color: #cccccc;
+}
+
+.tasks form ::-ms-input-placeholder {
+  color: #cccccc;
+}
+
+.tasks form ::placeholder {
+  color: #cccccc;
+}
+
+.tasks form .btn {
+  color: #f4f4f4;
+}
+
+.todo-list {
+  background-color: #f4f4f4;
+  margin: 4em 2.5em 3em 2.5em;
+  color: #333;
+  border: 1px solid #333;
+}
+
+.todo-list .list-heading {
+  padding: 0.7em 0 0 0.7em;
+  margin: 0;
+  margin-bottom: 1em;
+  word-spacing: 0.1em;
+  background-color: #e4e4e4;
+}
+
+.todo-list .list-heading .title {
+  margin: 0;
+}
+
+.todo-list .list-heading .count {
+  margin: 0;
+  color: #141414d5;
+  font-size: 0.8em;
+}
+
+.todo-list .list-body {
+  position: relative;
+  margin-top: 2.5em;
+}
+
+.todo-list .list-body .task {
+  font-size: 0.9em;
+  margin-bottom: 1.5em;
+  position: relative;
+}
+
+.todo-list .list-body .task label {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  cursor: pointer;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 2.5em;
+}
+
+.todo-list .list-body .task input[type=checkbox] {
+  display: inline-block;
+  margin-left: 0.8em;
+  cursor: pointer;
+  position: absolute;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 300ms ease-in-out;
+  transition: -webkit-transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+}
+
+.todo-list .list-body .task input[type=checkbox]:checked + label {
+  opacity: 0.5;
+}
+
+.todo-list .list-body .task::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 1em;
+  bottom: -50%;
+  height: 1px;
+  background: #e4e4e4;
+}
+
+.todo-list .list-body .task:hover input[type=checkbox] {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.todo-list .list-body input[type=checkbox]:checked + label {
+  font-weight: normal;
+}
+
+.todo-list .list-body input[type=checkbox]:checked + label::after {
+  content: "";
+  right: 0;
+  position: absolute;
+  left: 0;
+  background-color: #333;
+  height: 1px;
+}
+
+.todo-list .list-body .item-maker {
+  margin-top: 3em;
+}
+
+.todo-list .list-body .item-maker form .new {
+  border-bottom: 1px solid #333;
+  color: #333;
+  margin-left: 0.6em;
+}
+
+.todo-list .list-body .item-maker form ::-webkit-input-placeholder {
+  color: #979696;
+}
+
+.todo-list .list-body .item-maker form :-ms-input-placeholder {
+  color: #979696;
+}
+
+.todo-list .list-body .item-maker form ::-ms-input-placeholder {
+  color: #979696;
+}
+
+.todo-list .list-body .item-maker form ::placeholder {
+  color: #979696;
+}
+
+.todo-list .list-body .item-maker form .btn {
+  color: #5596e6;
+}
+
+.todo-list .delete {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  left: 0;
+  top: 14em;
+  position: absolute;
+  width: 100%;
+}
+
+.todo-list .delete .delete-tl {
+  border: none;
+  background-color: transparent;
+  color: #e4e4e4;
+  font-size: 0.9em;
+  -webkit-transition: color 200ms;
+  transition: color 200ms;
+  cursor: pointer;
+}
+
+.todo-list .delete .delete-tl:hover {
+  color: #b32222;
+  font-weight: bold;
+}
+
+.todo-list .delete .del-l {
+  margin-left: 2em;
+}
+
+@media only screen and (min-width: 600px) {
+  .list-body .item-maker {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .todo-list .list-body .item-maker {
+    margin-top: 2em;
+  }
+  .todo-list .list-heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .todo-list .list-heading .count {
+    font-size: 0.8em;
+    padding: 0 1em 0 1em;
+    margin-top: 0.5em;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .header {
+    font-size: 2em;
+  }
+  .container {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .container .todo-list {
+    width: 70%;
+    margin-top: 2.5em;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .header {
+    font-size: 2.5em;
+    margin-bottom: 0.7em;
+  }
+  .container {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .container .tasks {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .container .tasks .title {
+    font-size: 2em;
+  }
+  .container .tasks .task-lists {
+    font-size: 1em;
+  }
+  .container .todo-list {
+    width: 60%;
+  }
+  .container .todo-list .list-items {
+    font-size: 1.2em;
+  }
+  .container .todo-list .delete {
+    top: 15em;
+  }
+  .container .todo-list .delete .delete-tl {
+    font-size: 1.2em;
+  }
+  .container ::-webkit-input-placeholder {
+    font-size: 1.2em;
+  }
+  .container :-ms-input-placeholder {
+    font-size: 1.2em;
+  }
+  .container ::-ms-input-placeholder {
+    font-size: 1.2em;
+  }
+  .container ::placeholder {
+    font-size: 1.2em;
+  }
+}
+
+@media only screen and (min-width: 1399px) {
+  .header {
+    margin-bottom: 1em;
+  }
+}
+/*# sourceMappingURL=style.css.map */

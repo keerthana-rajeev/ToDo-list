@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="header">Tasks to be done</h1>
+    <div class="container">
+        <div class="tasks">
+            <h2 class="title">My lists</h2>
+            <ul class="task-lists">
+                <li class="active">YouTube</li>
+                <li>Work</li>
+                <li>Grocery</li>
+            </ul>
+            <form>
+                <input type="text" placeholder="new list name" class="new list" aria-label="Enter list name">
+                <button class="btn list" aria-label="Submit list name">+</button>
+            </form>
+        </div>
+        <div class="todo-list">
+            <div class="list-heading">
+                <h2 class="title">YouTube</h2>
+                <p class="count">3 tasks remaining</p>    
+            </div>
+            <div class="list-body">
+                <div class="list-items">
+                    <div class="task">
+                        <input type="checkbox" id="task-1">
+                        <label for="task-1">Record video</label>
+                    </div>
+                    <div class="task">
+                        <input type="checkbox" id="task-2">
+                        <label for="task-2">Edit video</label>
+                    </div>
+                    <div class="task">
+                        <input type="checkbox" id="task-3">
+                        <label for="task-3">Publish video</label>
+                    </div>
+                </div>
+                <div class="item-maker">
+                    <form>
+                        <input type="text" placeholder="new task name" class="new list" aria-label="Enter task">
+                        <button class="btn list" aria-label="Submit list name">+</button>
+                    </form>
+                </div>
+                <div class="delete">
+                    <button class="btn delete-tl">Clear completed</button>
+                    <button class="btn delete-tl del-l">Delete list</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

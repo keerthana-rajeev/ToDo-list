@@ -87,7 +87,7 @@ form .btn:hover {
 }
 
 .tasks .task-lists li:hover {
-  opacity: 0.4;
+  color: #dbdbdb;
 }
 
 .tasks .task-lists .active {
